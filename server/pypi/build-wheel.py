@@ -541,6 +541,8 @@ class BuildWheel:
                     SET(PYTHON_MODULE_EXTENSION .so)
                     """), file=toolchain_file)
 
+        os.environ["CHAQUOPY_CMAKE_TOOLCHAIN"] = toolchain_filename
+
     def detect_toolchain(self):
         clang = f"{self.toolchain}/bin/clang"
         for word in open(clang).read().split():
