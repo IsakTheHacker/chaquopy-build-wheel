@@ -1,0 +1,12 @@
+{% set version = "21.12" %}
+
+package:
+  name: protobuf
+  version: 4.{{ version }}
+
+source:
+  url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v{{ version }}.tar.gz
+
+requirements:
+  build:
+    - cmake
