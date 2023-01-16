@@ -1,0 +1,7 @@
+package:
+  name: numexpr
+  version: 2.8.4
+
+requirements:
+  build:
+    - numpy 1.24.1
