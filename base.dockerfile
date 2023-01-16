@@ -3,6 +3,7 @@
 # * Java 11, used by piptest because it's required by Android Gradle plugin 7.0 and later.
 FROM debian:stretch-20210902
 RUN echo "deb http://deb.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
+RUN echo "deb http://deb.debian.org/debian stretch-backports-sloppy main" >> /etc/apt/sources.list
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /root
