@@ -1,4 +1,4 @@
-{% set version = "3.3" %}
+{% set version = "3.4.4" %}
 
 package:
   name: chaquopy-libffi
@@ -8,4 +8,4 @@ build:
   number: 1
 
 source:
-  url: ftp://sourceware.org/pub/libffi/libffi-{{ version }}.tar.gz
+  url: https://github.com/libffi/libffi/releases/download/v{{ version }}/libffi-{{ version }}.tar.gz

@@ -28,10 +28,10 @@ diff -ur src-original/setup.py src/setup.py
 -include_dirs = ['/usr/include/ffi',
 -                '/usr/include/libffi']    # may be changed by pkg-config
 +include_dirs = []    # Chaquopy: removed /usr/include paths
- define_macros = []
+ define_macros = [('FFI_BUILDING', '1')]   # for linking with libffi static library
  library_dirs = []
  extra_compile_args = []
-@@ -138,7 +137,7 @@
+@@ -144,7 +144,7 @@
      sources.extend(os.path.join(COMPILE_LIBFFI, filename)
                     for filename in _filenames)
  else:
